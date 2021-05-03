@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+		<title>DX Lab | Which Way the Wind Blows</title> 		
+		
+		<link rel="shortcut icon" href="img/favicon.ico"/>
+		<meta name="description" content=""/>
+		<meta property="og:type" content=""/>
+		<meta property="og:title" content=""/>
+		<meta property="og:description" content=""/>
+		<meta property="og:image" content=""/>
+		<meta property="og:url" content=""/>
+		<meta name="twitter:image:alt" content=""/>
+		<meta name="twitter:card" content=""/>
+		<meta property="og:site_name" content="The Way Wind Blows | a DX Lab project"/>
+		<meta property="fb:app_id" content="367545747036470"/>
+		<meta name="twitter:site" content="@statelibrarynsw"/>
+
+		<link rel="manifest" href="manifest.json"> 
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,500,500i,600" rel="stylesheet" >
+		<link href="https://fonts.googleapis.com/css?family=Lekton:400,400i,700" rel="stylesheet" >
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+		<link href="//vjs.zencdn.net/7.10.2/video-js.min.css" rel="stylesheet">
+		<script src="//vjs.zencdn.net/7.10.2/video.min.js"></script>
+		<link href="css/videojs.markers.css" rel="stylesheet">
+		<script src='js/videojs-markers.js'></script>
+
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="main">
+			<!-- <div id="vignettes"></div> -->
+			<div id="visualisations">
+				<div class="map">
+					<div class="heading-wrapper">
+						<h2>Social Media Activities Over NSW</h2>
+						<h3 id="currentWeek">Seven days from 16 March 2019</h3>
+					</div>
+					<div class="video-wrapper">
+						<video
+						    id="vis-player"
+						    class="video-js vjs-fill"
+						    autoplay
+						    controls
+						    loop="loop"
+						    preload="auto"
+						    webkit-playsinline
+						    playsinline
+						    data-setup='{
+						    	"inactivityTimeout": 0
+							}'
+						>
+						  <source id="weatherMapSource" src="videos/16-03-2019-NSW-election-2x.mp4" type="video/mp4"></source>
+						  <!-- <source src="//vjs.zencdn.net/v/oceans.webm" type="video/webm"></source>
+						  <source src="//vjs.zencdn.net/v/oceans.ogv" type="video/ogg"></source> -->
+						  <p class="vjs-no-js">
+						    To view this video please enable JavaScript, and consider upgrading to a
+						    web browser that
+						    <a href="https://videojs.com/html5-video-support/" target="_blank">
+						      supports HTML5 video
+						    </a>
+						  </p>
+						</video>
+					</div>
+				</div>
+				<div class="sevendays">
+					<div class="heading-wrapper">
+						<h2>Major Events</h2>
+						<h3>2019-2020</h3>
+					</div>
+					<div id="days">
+						<div class="day active" data-source="videos/16-03-2019-NSW-election-2x.mp4">
+							
+							<div class="details">
+								<div class="date">16 March 2019</div>
+								<div class="label">NSW Election</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/11-05-2019-federal-election-2x.mp4">
+							
+							<div class="details">
+								<div class="date">11 May 2019</div>
+								<div class="label">Federal Election</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/14-07-2019-NAIDOC-week-2x.mp4">
+							
+							<div class="details">
+								<div class="date">14 July 2019</div>
+								<div class="label">NAIDOC Week</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/01-12-2019-bushfire-2x.mp4">
+							
+							<div class="details">
+								<div class="date">1 December 2019</div>
+								<div class="label">Bushfires</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/17-03-2020-covid-lockdown-2x.mp4">
+							
+							<div class="details">
+								<div class="date">17 March 2020</div>
+								<div class="label">Travel Ban</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/02-08-2020-covid-2nd-wave-peak-2x.mp4">
+							
+							<div class="details">
+								<div class="date">2 August 2020</div>
+								<div class="label">Second wave of COVID-19</div>
+							</div>
+						</div>
+						<div class="day" data-source="videos/10-12-2020-capitol-riot-2x.mp4">
+							
+							<div class="details">
+								<div class="date">10 December 2020</div>
+								<div class="label">US Capitol Riot</span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="legend">
+				<h4>About <b>Which Way the Wind Blows</b></h4>
+				<ul>
+					<li><span class="icon"></span>Topics are represented as pressure systems composed of isobars.</li>
+					<li><span class="icon"></span>The size of a pressure system is determined by the nunmber of total daily social media activities (the number below the topic name label).</li>
+					<li><span class="icon"></span>High activity systems will exert force on weaker counterparts in order to occupy more space over the area. </li>
+				</ul>
+			</div>
+		</div>
+		<div id="info_btn">
+			<a href="#"><img src="img/info.png"></img></a>
+		</div>
+		<div id="takeover" class="modal active">
+			
+			<div class="header">
+				<div class="dxLogo">
+					<a href="https://dxlab.sl.nsw.gov.au">
+						<img src="img/logo-dxlab.png" alt="DX Lab Logo."/>
+					</a>
+				</div>
+				<div class="slLogo">
+					<a href="http://sl.nsw.gov.au" target="_blank" rel="noopener noreferrer">
+						<img src="img/logo-slnsw-white.png" alt="State Library Logo."/>
+					</a>
+				</div>
+			</div>
+			
+			<div id="popup_content">
+				<div id="close_info_btn">
+					<a href="#"><img src="img/info.png"></img></a>
+					<a href="#"><img id="close_btn" src="img/close.png"></img></a>
+				</div>
+				<h2>Which Way The Wind Blows</h2>
+				<h4>DX Lab Digital Drop-in Program</h4>
+
+				<p><i>Which Way The Wind Blows</i> presents a novel way to visualise patterns in social media posts. Leveraging on people's familiarity with nightly weather reports, topics are visualised as evolving pressure systems, volume of posts as isobars, and notable keywords as troughs. Revealing what people talk and care about on social media can become a crucial component in understanding what life is like in the state of New South Wales.</p>
+
+				<p>The State Library of NSW's <a href="https://www.sl.nsw.gov.au/research-and-collections-significant-collections/social-media-archive" target="_blank">Social Media Archive</a> collects material to provide a documentary record of life for the state's citizens. The archive has established itself as a rich and versatile resource for researchers and domain experts.</p>
+
+				<p><i>Which Way The Wind Blows</i> aims to improve accessibility, interpretation and appreciation of <a href="https://www.sl.nsw.gov.au/research-and-collections-significant-collections/social-media-archive" target="_blank">The Social Media Archive</a> to the general public. We hope that by 'casualising' the Social Media Archive data, we can promote awareness, encourage utilisation, and build an ecosystem for innovation around the archive - making the archive an integral part of the State Library collection.</p>
+
+
+				<div class="smaller">
+				<h3>Project Credits:</h3>
+				<h4>
+					<i>Concept/design: </i> Chuan Jia (Jack) Zhao<br/>
+					<i>Creative Technologist:</i> Harry Morris<br/>
+				</h4>
+
+				<h3>A Small Multiples Project</h3>
+				<h4><a href="https://small.mu">small.mu</a></h4>
+			</div>
+
+			<div class="footer">
+				<ul class="footer-menu">
+					<li><a href="https://www.sl.nsw.gov.au/disclaimer">Disclaimer</a></li>
+					<li><a href="https://www.sl.nsw.gov.au/privacy/web-privacy-statement">Privacy</a></li>
+					<li><a href="https://www.sl.nsw.gov.au/copyright">Copyright</a></li>
+					<li><a href="https://www.sl.nsw.gov.au/right-to-information">Right to information</a></li>
+				</ul>
+				<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" class="footer__cc">
+					<div>CC by 4.0</div>
+				</a>
+				<div class="footer__social">
+					<a href="https://www.facebook.com/statelibrarynsw" aria-label="Follow us on Facebook">
+						<span class="slnsw-icon-facebook" aria-hidden="true"></span>
+					</a>
+					<a href="https://twitter.com/statelibrarynsw" aria-label="Follow us on Twitter">
+						<span class="slnsw-icon-twitter" aria-hidden="true"></span>
+					</a>
+					<a href="https://www.youtube.com/statelibrarynewsouthwales" aria-label="Follow us on Youtube">
+						<span class="slnsw-icon-youtube" aria-hidden="true"></span>
+					</a>
+					<a href="http://instagram.com/statelibrarynsw" aria-label="Follow us on Instagram">
+						<span class="slnsw-icon-instagram" aria-hidden="true"></span>
+					</a>
+					<a href="https://www.flickr.com/photos/29454428@N08/" aria-label="Follow us on Flickr">
+						<span class="slnsw-icon-flickr" aria-hidden="true"></span>
+					</a>
+					<a href="http://pinterest.com/statelibrarynsw" aria-label="Follow us on Pinterest">
+						<span class="slnsw-icon-pinterest" aria-hidden="true"></span>
+					</a>
+					<a href="http://dxlab.sl.nsw.gov.au/feed/" aria-label="Follow us on RSS">
+						<span class="slnsw-icon-rss" aria-hidden="true"></span>
+					</a>
+				</div>
+				<div class="footer__nsw-logo">
+					<a href="https://www.nsw.gov.au/" target="_blank" rel="noopener noreferrer">
+						<img alt="NSW Government logo." src="img/logo-nsw-white.png" class=""/>
+					</a>
+				</div>
+			</div>
+
+		</div>
+
+		<script>
+			var isMobile = navigator.userAgent.match(/(iPad)|(iPhone)|(iPod)|(android)|(webOS)/i)
+			if ( !isMobile )
+			{
+				document.getElementById("popup_content").classList.add ( "skinny" );
+			}else
+			{
+				document.getElementById("popup_content").classList.add ( "scrolly" );
+			}
+		</script>
+		<!-- Load React. -->
+		<!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+		<script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+		<script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+
+		<!-- Load our React component. -->
+		<script type="module" src="js/app.js"></script>
+	</body>
+</html>
